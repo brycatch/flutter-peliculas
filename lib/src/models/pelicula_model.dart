@@ -13,6 +13,8 @@ class Peliculas {
 }
 
 class Pelicula {
+  String uniqueId;
+
   double popularity;
   int id;
   bool video;
@@ -66,7 +68,15 @@ class Pelicula {
     if (posterPath == null) {
       return 'https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png';
     } else {
-      return 'https://image.tmdb.org/t/p/w500/$posterPath';
+      return 'https://image.tmdb.org/t/p/w500$posterPath';
+    }
+  }
+
+  getBackgroundImg() {
+    if (posterPath == null) {
+      return 'https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500$backdropPath';
     }
   }
 }
